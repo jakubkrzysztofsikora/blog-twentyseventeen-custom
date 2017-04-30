@@ -15,6 +15,14 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+		<?php
+		// If a regular post or page, and not the front page, show the featured image.
+		if ( has_post_thumbnail() && ( is_single() || ( is_page() && ! twentyseventeen_is_frontpage() ) ) ) :
+			echo '<div class="single-featured-image-header">';
+			the_post_thumbnail( 'twentyseventeen-featured-image' );
+			echo '</div><!-- .single-featured-image-header -->';
+		endif;
+		?>
 		<?php twentyseventeen_edit_link( get_the_ID() ); ?>
 	</header><!-- .entry-header -->
 	<div class="entry-content">
