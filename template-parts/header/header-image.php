@@ -9,7 +9,7 @@
  */
 
 ?>
-<div class="custom-header">
+<div class="custom-header" style="<?php ( has_post_thumbnail() && ( is_single() || ( is_page() && ! twentyseventeen_is_frontpage() ) ) ) ? echo 'height: 500px;' : echo ''; ?>">
 
 	<div class="custom-header-media">
 		<?php

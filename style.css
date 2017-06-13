@@ -4233,3 +4233,14 @@ object {
 		padding: 0;
 	}
 }
+
+/* CUSTOM */
+
+body:not(.has-header-image):not(.has-header-video) .custom-header-media {
+	display: block;
+    position: absolute;
+    opacity: 0.8;
+    height: 500px;
+    -webkit-filter: grayscale(30%);
+	filter: grayscale(30%);
+}
