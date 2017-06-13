@@ -17,6 +17,14 @@ if ( version_compare( $GLOBALS['wp_version'], '4.7-alpha', '<' ) ) {
 	return;
 }
 
+require_once(get_template_directory() . '/services/random-photo-of-me-service.php');
+
+function get_random_photo_of_me()
+{
+	$randomPhotoOfMeService = new random_photo_of_me_service();
+	return $randomPhotoOfMeService->getUrlOfRandomPhoto();
+}
+
 /**
  * Sets up theme defaults and registers support for various WordPress features.
  *

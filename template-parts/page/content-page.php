@@ -10,15 +10,13 @@
  * @version 1.0
  */
 
-require_once('../../services/random-photo-of-me-service.php');
-
-$randomPhotoOfMeService = new random_photo_of_me_service();
+$random_photo = get_random_photo_of_me();
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-		<img src="<?php echo $randomPhotoOfMeService->getUrlOfRandomPhoto(); ?>" />
+		<a href="<?php echo $random_photo; ?>" data-rel="lightbox-0"><img src="<?php echo get_random_photo_of_me(); ?>" /></a>
 		<?php twentyseventeen_edit_link( get_the_ID() ); ?>
 	</header><!-- .entry-header -->
 	<div class="entry-content">
