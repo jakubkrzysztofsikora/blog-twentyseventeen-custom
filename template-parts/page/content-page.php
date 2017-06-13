@@ -10,7 +10,7 @@
  * @version 1.0
  */
 
-require_once('../services/random-photo-of-me-service.php');
+require_once('../../services/random-photo-of-me-service.php');
 
 $randomPhotoOfMeService = new random_photo_of_me_service();
 ?>
