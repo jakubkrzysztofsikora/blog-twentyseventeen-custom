@@ -11,8 +11,8 @@ class random_photo_of_me_service
 	{
 		$arrayOfPaths = [];
 		foreach (scandir($this->photosPath) as $filename) {
-			$path = concatPaths($this->photosPath, $filename);
-			$arrayOfPaths = addToArrayRealFilePath($arrayOfPaths, $path);
+			$path = $this->concatPaths($this->photosPath, $filename);
+			$arrayOfPaths = $this->addToArrayRealFilePath($arrayOfPaths, $path);
 		}
 
 
@@ -22,7 +22,7 @@ class random_photo_of_me_service
 	private function addToArrayRealFilePath($array, $path)
 	{
 		if (is_file($path)) {
-			array_push($array, createWebReadyRelativePath($path));
+			array_push($array, $this->createWebReadyRelativePath($path));
 		}
 
 		return $array;
@@ -30,7 +30,7 @@ class random_photo_of_me_service
 
 	private function concatPaths($path1, $path2)
 	{
-		return path1 . '/' . $path2;
+		return $path1 . '/' . $path2;
 	}
 
 	private function createWebReadyRelativePath($path)
