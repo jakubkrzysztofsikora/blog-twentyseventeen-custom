@@ -4244,3 +4244,7 @@ body:not(.has-header-image):not(.has-header-video) .custom-header-media {
     -webkit-filter: grayscale(30%);
 	filter: grayscale(30%);
 }
+
+.entry-content ul {
+	margin-left: 50px;
+}
