@@ -8,8 +8,9 @@
  * @version 1.0
  */
 
+$header_style = ( has_post_thumbnail() && ( is_single() || ( is_page() && ! twentyseventeen_is_frontpage() ) ) ) ? 'height: 500px;' : ''; 
 ?>
-<div class="custom-header" style="<?php ( has_post_thumbnail() && ( is_single() || ( is_page() && ! twentyseventeen_is_frontpage() ) ) ) ? echo 'height: 500px;' : echo ''; ?>">
+<div class="custom-header" style="<?php echo $header_style; ?>">
 
 	<div class="custom-header-media">
 		<?php
