@@ -4248,3 +4248,11 @@ body:not(.has-header-image):not(.has-header-video) .custom-header-media {
 .entry-content ul {
 	margin-left: 50px;
 }
+
+.random-photo {
+	margin-top: 20px;
+}
+
+.random-photo img {
+	border: 3px solid black;
+}

@@ -16,7 +16,7 @@ $random_photo = get_random_photo_of_me();
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-		<a href="<?php echo $random_photo; ?>" data-rel="lightbox-0"><img src="<?php echo get_random_photo_of_me(); ?>" /></a>
+		<div class="random-photo"><a href="<?php echo $random_photo; ?>" data-rel="lightbox-0"><img src="<?php echo $random_photo; ?>" /></a></div>
 		<?php twentyseventeen_edit_link( get_the_ID() ); ?>
 	</header><!-- .entry-header -->
 	<div class="entry-content">
