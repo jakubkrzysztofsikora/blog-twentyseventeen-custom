@@ -4256,3 +4256,7 @@ body:not(.has-header-image):not(.has-header-video) .custom-header-media {
 .random-photo img {
 	border: 3px solid black;
 }
+
+li img {
+	margin: 40px auto;
+}
