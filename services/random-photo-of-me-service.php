@@ -35,7 +35,7 @@ class random_photo_of_me_service
 
 	private function createWebReadyRelativePath($path)
 	{
-		return substr($path, strlen($_SERVER['DOCUMENT_ROOT']));
+		return concatPaths($_SERVER['HTTP_REFERER    '], basename($path));
 	}
 }
 ?>
