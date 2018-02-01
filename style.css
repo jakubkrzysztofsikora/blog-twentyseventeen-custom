@@ -4261,7 +4261,7 @@ li img {
 	margin: 40px auto;
 }
 
-ol.simple-list {
+ol {
     list-style-type: none;
      
     margin: 0;
@@ -4293,4 +4293,8 @@ ol > li:before {
  
     content: counter(li-counter);
     counter-increment: li-counter;
+}
+
+.page .rt-reading-time {
+	display: none !important;
 }
