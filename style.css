@@ -4282,7 +4282,7 @@ ol > li {
 ol > li:before {
     position: absolute;
     top: 0;
-    left: -1em;
+    left: -1.5em;
     width: 0.8em;
      
     font-size: 3em;
