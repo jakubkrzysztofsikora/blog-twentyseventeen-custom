@@ -4,7 +4,7 @@ class random_photo_of_me_service
 	private $photosPath;
 
 	function __construct() {
-       $this->photosPath = dirname(__FILE__) . '/../../../../public-photos';
+       $this->photosPath = '/home/site/wwwroot/public-photos/';
    }
 
 	public function getUrlOfRandomPhoto()
@@ -30,12 +30,12 @@ class random_photo_of_me_service
 
 	private function concatPaths($path1, $path2)
 	{
-		return $path1 . '/' . $path2;
+		return $path1 . $path2;
 	}
 
 	private function createWebReadyRelativePath($path)
 	{
-		return concatPaths($_SERVER['HTTP_REFERER    '], basename($path));
+		return $this->concatPaths((isset($_SERVER['HTTPS']) ? "https" : "http") . "://" . $_SERVER[HTTP_HOST] . "/public-photos/", basename($path));
 	}
 }
 ?>
